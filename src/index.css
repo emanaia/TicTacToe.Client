@@ -1,0 +1,222 @@
+html, body{
+  height:100%;  
+  width: 100%;
+  margin:0;
+  padding:0;
+  background-color: #eee;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0;
+}
+
+#root{
+  height: 100%;
+}
+
+
+.footer, .navbar, .alert-senha{
+height: 60px;
+}
+
+.menu {
+   height: 52px;
+}
+.content{   
+  height: calc(100vh - 152px);
+}
+
+.tab-content{
+  height: calc(100vh - (152px + 68px));
+}
+
+.chat-content{
+  height: calc(100vh - (152px + (68px * 2)));;
+}
+
+
+#board > .d-flex {
+    height: 120px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0;
+    font-size: 5rem;
+}
+
+
+/* ROOMS CARD */
+
+.rooms-info{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: black;
+ color: #f8f9fa;
+ height: 17px;
+ font-size: small;
+}
+
+.padlock{
+  background-image: url("./icons/password.png");  
+}
+
+/* END ROOMS CARD */
+
+.container-login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	-webkit-transform: translate(-50%, -60%);
+	-moz-transform: translate(-50%, -60%);
+	-ms-transform: translate(-50%, -60%);
+	-o-transform: translate(-50%, -60%);
+}
+
+/* NAVBAR LEFT */
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #f8f9fa ;   
+  color: black;
+}
+
+.btn-outline-light{
+  opacity: .9;
+}
+
+/* END NAVBAR LEFT */
+
+/* CHECKBOX PLAYER CHECK */
+
+.inner-circle{
+  width: 10px;
+  height: 29px;  
+}
+
+.playerCheck{
+  width: 65px;
+}
+
+.player_turn{
+  animation: blinkerPlayer 2s    infinite ease-in-out;
+  -webkit-animation: blinkerPlayer 2s    infinite ease-in-out;
+}
+@keyframes blinkerPlayer{
+  50%{
+    fill: #b67139
+}
+}
+.text-h5{
+  color:#343a40;
+  font-size: 1.15rem;
+}
+.tred > span{
+  animation: blinkerRed 4s  alternate infinite ease-in-out;
+  -webkit-animation: blinkerRed 4s  alternate infinite ease-in-out;
+}
+
+.tgreen > span{
+  animation: blinkerGreen 4s  alternate infinite ease-in-out;
+  -webkit-animation: blinkerGreen 4s  alternate infinite ease-in-out;
+}
+
+@keyframes blinkerRed{
+  50%{
+    filter: drop-shadow(0 0 .5rem red);
+    -webkit-filter: drop-shadow(0 0 .5rem red);
+    color: rgb(252, 185, 185);
+}
+}
+@keyframes blinkerGreen{
+  50%{
+    filter: drop-shadow(0 0 .5rem green);
+    -webkit-filter: drop-shadow(0 0 .5rem green);
+    color: rgb(156, 247, 156);
+}
+}
+/* END CHECKOX PLAYER CHECK */
+
+
+
+
+@media (max-width: 576px) { 
+  .social-icons, .version{
+    display: none;
+  }  
+}
+
+@media (min-width: 576px) { 
+  
+ }
+
+@media (min-width: 768px) { 
+  
+ }
+
+@media (min-width: 992px) { 
+  
+ }
+
+@media (min-width: 1200px) { 
+  
+ }
+
+
+/* CHAT LIST  */
+.msg-mine {
+  background: #e1f1f8;
+}  
+
+.msg-other {
+  background: #e1f1f8;
+}
+
+
+
+/* PRE.LOADER */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #17a2b8;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
